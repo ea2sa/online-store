@@ -34,7 +34,7 @@ node {
 
     stage('backend tests') {
             try {
-                sh "./gradlew test integrationTest -PnodeInstall --no-daemon"
+                sh "./gradlew npm run e2e -PnodeInstall --no-daemon"
             } catch(err) {
                 throw err
             } finally {
