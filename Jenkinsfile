@@ -21,7 +21,7 @@ node {
         sh "./gradlew npm_install -PnodeInstall --no-daemon"
     }
 
-    
+
     stage('frontend tests') {
         try {
             sh "./gradlew npm_run_test -PnodeInstall --no-daemon"
